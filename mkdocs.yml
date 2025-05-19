@@ -1,0 +1,18 @@
+site_name: My Project
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: ["src"]
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true

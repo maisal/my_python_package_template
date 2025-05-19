@@ -1,0 +1,31 @@
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.11.9
+    hooks:
+        - id: ruff
+          types_or: [python, pyi]
+
+        - id: ruff-format
+          types_or: [python, pyi]
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace       # 行末の空白を削除
+      - id: end-of-file-fixer         # ファイル末尾に改行があるかチェック
+      - id: check-case-conflict
+      - id: check-added-large-files   # 大きすぎるファイルをうっかり commit しない
+      - id: check-merge-conflict      # マージコンフリクト残りの検出
+      - id: check-yaml                # YAML ファイルの構文チェック
+      - id: check-toml
+      - id: check-json
+      - id: check-xml
+      - id: debug-statements
+      - id: mixed-line-ending
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.15.0
+    hooks:
+      - id: mypy
+  - repo: https://github.com/astral-sh/uv-pre-commit
+    rev: 0.7.4
+    hooks:
+      - id: uv-lock
