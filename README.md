@@ -1,3 +1,5 @@
+[![pytest](https://github.com/maisal/my_python_package_template/actions/workflows/pytest.yml/badge.svg)](https://github.com/maisal/my_python_package_template/actions/workflows/pytest.yml)
+
 # My Python package template
 
 ## Features
